@@ -1,0 +1,18 @@
+import java.math.BigDecimal;
+public class CurrencyDataType{
+	
+	public static void main(String[] args){
+// why not to use float and double for the currencies		
+		float floatResult = 0.1f + 0.2f;
+        double doubleResult = 0.1 + 0.2;
+        System.out.printf("Float result: %.20f%n", floatResult); // Output: 0.30000001192092895508
+        System.out.printf("Double result: %.20f%n", doubleResult); // Output: 0.30000000000000004441
+		
+// use BigDecinal instead in string representation
+		BigDecimal bd1 = new BigDecimal(".1");
+		BigDecimal bd2 = new BigDecimal(".2");
+		BigDecimal sumBD = bd1.add(bd2);	
+		System.out.printf("Double result: %.20f%n", sumBD);
+	}
+	
+}
